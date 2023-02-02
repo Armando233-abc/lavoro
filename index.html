@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="./app.js" defer></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div>
+        <div id="contenitore_titolo">
+            <h1 id="titolo">Titolo</h1>
+            <div id="figura"></div>
+        </div>
+
+        <div id="contenitore_corpo">
+            <div class="row">
+                <div onclick="mostra('./img/prova.jpeg', 'ciao mondo, sono Homer Simpson')">
+                    <img src="./img/prova.jpeg" alt="">
+                    <p>ciao mondo, sono Homer Simpson</p>
+                </div>
+
+                <div onclick="mostra('./img/prova1.jpeg', 'ciao mondo, sono Homer Simpson')">
+                    <img src="./img/prova1.jpeg" alt="">
+                    <p>ciao mondo, sono Homer Simpson</p>
+                </div>
+            </div>
+
+            <div class="row">
+                <div onclick="mostra('./img/prova2.png', 'ciao mondo, sono Homer Simpson')">
+                    <img src="./img/prova2.png" alt="">
+                    <p>ciao mondo, sono Homer Simpson</p>
+                </div>
+
+                <div onclick="mostra('./img/prova.jpeg', 'ciao mondo, sono Homer Simpson')">
+                    <img src="./img/prova.jpeg" alt="">
+                    <p>ciao mondo, sono Homer Simpson</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="contenitore_menu">
+        <ul id="menu">
+            <li id="foto">
+                <a href="make_photo.html">X</a>
+                <!-- <img src="./img/camera.png" alt="camera"> -->
+            </li>
+            <li id="libro">
+                <a href="libro.html">X</a>
+                <!-- <img src="./img/libro.png" alt="libro"> -->
+            </li>
+        </ul>
+    </div>
+
+    <div id="mostra_img">
+        
+        <div onclick="rimuovi()">
+            <img id="return" src="./img/freccia.png" alt="">
+        </div>
+        
+        
+        <div id="contenitore">
+            <img src="" id="img" alt="">
+            <p id="text"></p>
+        </div>
+    </div>
+</body>
+
+</html>
