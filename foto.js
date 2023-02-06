@@ -4,7 +4,7 @@ let click_button = document.querySelector("#click-photo");
 let canvas = document.querySelector("#canvas");
 
 camera_button.addEventListener('click', async function () {
-      let stream = await navigator.mediaDevices.getUserMedia({ video: { width: 720, height: 1280, facingMode:"environment"}, audio: false });
+      let stream = await navigator.mediaDevices.getUserMedia({ video: { width: 2000, height: 1280, facingMode:"environment"}, audio: false });
       video.srcObject = stream;
 });
 
