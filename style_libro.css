@@ -55,6 +55,7 @@ body {
 
 #corpo{
     margin: 30px 0px 0px 20px;
+    overflow: hidden;
 }
 
 #contenitore_immagini{
