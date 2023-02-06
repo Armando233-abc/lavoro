@@ -12,7 +12,7 @@ body {
 
 #contenitore {
       position: absolute;
-      left: 20%;
+      left: 10%;
       top: 15%;
 }
 
@@ -26,7 +26,7 @@ body {
 
 #contenitore_img>canvas {
       position: relative;
-      left: 11%;
+      left: 20%;
       top: 15%;
       width: 240px;
       height: 400px;
