@@ -21,7 +21,7 @@ mostra_camera()
 
 click_button.addEventListener('click', function () {
       canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-      video.srcObject = null;
+      
       video.style.display = 'none';
       click_button.dyspplay = 'none';
 
@@ -35,3 +35,8 @@ click_button.addEventListener('click', function () {
       const selezione = document.querySelector('#selezione');
       selezione.style.display = 'grid';
 });
+
+
+function salva(){
+      localStorage.setItem("img", canvas.toDataURL('image/png'))
+}
