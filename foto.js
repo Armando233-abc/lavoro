@@ -23,11 +23,15 @@ click_button.addEventListener('click', function () {
       canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
       video.srcObject = null;
       video.style.display = 'none';
-      click_button.dysplay = 'none';
+      click_button.dyspplay = 'none';
 
       const contenitore = document.querySelector('#contenitore');
       contenitore.style.display = 'none';
 
       const contenitore_img = document.querySelector('#contenitore_img');
       contenitore_img.style.display = 'block';
+
+
+      const selezione = document.querySelector('#selezione');
+      selezione.style.display = 'grid';
 });

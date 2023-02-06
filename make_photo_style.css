@@ -5,8 +5,23 @@ body {
       overflow-x: hidden;
 }
 
+#selezione {
+      display: none;
+      grid-template-columns: 1fr 1fr;
+}
+
 #return {
       margin-top: 80px;
+      width: 100px;
+}
+
+#selezione>#destra {
+      display: flex;
+      justify-content: flex-end;
+}
+
+#v {
+      margin-top: 50px;
       width: 100px;
 }
 
@@ -27,16 +42,20 @@ body {
 #contenitore_img>canvas {
       position: relative;
       left: 20%;
-      top: 15%;
       width: 240px;
       height: 400px;
       border-radius: 20px;
 }
 
-#contenitore>p {
-      margin-top: 30px;
-      padding: 10px;
+#descrizione {
+      resize: none;
       background-color: #8A7F8D;
-      height: 70px;
+      position: relative;
+      left: 20%;
+      width: 220px;
+      height: 75px;
+      border: none;
       border-radius: 10px;
+      padding: 10px;
+      margin-top: 20px;
 }

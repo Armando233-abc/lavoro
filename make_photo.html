@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,30 @@
       <script src="./foto.js" defer></script>
       <link rel="stylesheet" href="make_photo_style.css">
 </head>
+
 <body>
+      <div id="selezione">
+            <div>
+                  <a href="index.html">
+                        <img id="return" src="./img/freccia.png" alt="">
+
+                  </a>
+            </div>
+            <div id="destra">
+                  <img id="v" src="./img/V.png" alt="">
+            </div>
+      </div>
+
       <div id="contenitore">
             <video id="video" width="320" height="440" autoplay></video>
-            <button id="click-photo">Click Photo</button>   
+            <button id="click-photo">Click Photo</button>
       </div>
-      
+
 
       <div id="contenitore_img">
             <canvas id="canvas"></canvas>
+            <textarea id="descrizione" maxlength="40" cols="30" rows="10"></textarea>
       </div>
 </body>
+
 </html>
