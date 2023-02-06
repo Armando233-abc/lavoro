@@ -6,11 +6,17 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <script src="./foto.js" defer></script>
+      <link rel="stylesheet" href="make_photo_style.css">
 </head>
 <body>
-      <button id="start-camera">Start Camera</button>
-      <video id="video" width="320" height="440" autoplay></video>
-      <button id="click-photo">Click Photo</button>
-      <canvas id="canvas" width="320" height="440"></canvas>
+      <div id="contenitore">
+            <video id="video" width="320" height="440" autoplay></video>
+            <button id="click-photo">Click Photo</button>   
+      </div>
+      
+
+      <div id="contenitore_img">
+            <canvas id="canvas"></canvas>
+      </div>
 </body>
 </html>
