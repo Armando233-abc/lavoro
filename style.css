@@ -7,6 +7,7 @@ body {
 
       display: grid;
       grid-template-columns: 90% 10%;
+      height: 100vh;
 }
 
 #menu {
@@ -14,7 +15,7 @@ body {
       padding: 0;
       background-color: chartreuse;
       width: 35px;
-      height: 100vh;
+      height: 100%;
       margin-left: auto;
       list-style-type: none;
 }
