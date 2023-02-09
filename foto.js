@@ -3,25 +3,28 @@ let click_button = document.querySelector("#click-photo");
 let canvas = document.querySelector("#canvas");
 
 async function mostra_camera() {
-      let stream = await navigator.mediaDevices.getUserMedia({ video: { 
-            width: {
-                  min: 1280,
-                  ideal: 1920,
-                  max: 2560,
-            },
-            height: {
-                  min: 720,
-                  ideal: 1080,
-                  max: 1440
-            },
-            facingMode:"environment"}, audio: false });
+      let stream = await navigator.mediaDevices.getUserMedia({
+            video: {
+                  width: {
+                        min: 1280,
+                        ideal: 1920,
+                        max: 2560,
+                  },
+                  height: {
+                        min: 720,
+                        ideal: 1080,
+                        max: 1440
+                  },
+                  facingMode: "environment"
+            }, audio: false
+      });
       video.srcObject = stream;
 }
 mostra_camera()
 
 click_button.addEventListener('click', function () {
       canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-      
+
       video.style.display = 'none';
       click_button.dyspplay = 'none';
 
@@ -37,6 +40,14 @@ click_button.addEventListener('click', function () {
 });
 
 
-function salva(){
-      localStorage.setItem("img", canvas.toDataURL('image/png'))
+function salva() {
+      const text = document.querySelector("#descrizione")
+      if (text.value === '') {
+            alert('Inserisci una piccola descrizione');
+      } else {
+            localStorage.setItem("img", canvas.toDataURL('image/png'))
+            localStorage.setItem("text", text.value)
+            window.location.href = 'index.html';
+      }
+
 }

@@ -1,13 +1,19 @@
 if (localStorage.getItem('img')) {
       const div = document.createElement('div');
       const img = document.createElement('img');
+      const p = document.createElement('p');
       const div_corpo = document.querySelector("#contenitore_corpo")
 
       img.src = localStorage.getItem('img')
       localStorage.removeItem('img')
+
+      p.innerHTML = localStorage.getItem('text')
+      localStorage.removeItem('img')
+
       div.onclick = "mostra(" + img.src + ", ciao sono homer simp)";
 
       div.appendChild(img)
+      div.appendChild(p)
       div_corpo.appendChild(div)
 }
 
@@ -28,6 +34,47 @@ function rimuovi() {
       contenitore.style.display = "none"
 }
 
+
+function visualizza(){
+      const li = document.querySelectorAll("#contenitore_menu li")
+      const contenitore_body = document.querySelector("#contenitore_body");
+      const divs = document.querySelectorAll("#contenitore_menu div");
+
+      contenitore_body.style.opacity = "0.5";
+      divs.forEach((div) =>{
+            div.style.display = "block"
+      })
+      li.forEach((l)=>{
+            l.style.backgroundColor = "chartreuse"
+      })
+}
+
+function togli(){
+      const contenitore_body = document.querySelector("#contenitore_body");
+      contenitore_body.style.opacity = "1";
+
+      const li = document.querySelectorAll("#contenitore_menu li")
+      li.forEach((l) => {
+            l.style.backgroundColor = "DarkOrchid"
+      })
+
+      const divs = document.querySelectorAll("#contenitore_menu div");
+      divs.forEach((div) => {
+            div.style.display = "none"
+      })
+}
+
+function make_photo(){
+      window.location.href = "make_photo.html";
+}
+
+function make_photo() {
+      window.location.href = "make_photo.html";
+}
+
+function see_books(){
+      window.location.href = "libro.html";
+}
 
 
 // /-------------------------------------/

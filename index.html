@@ -13,60 +13,62 @@
 <body>
 
 
-    <div>
+    <div id="contenitore_body" onclick="togli()">
         <div id="contenitore_titolo">
             <h1 id="titolo">Titolo</h1>
             <div id="figura"></div>
         </div>
 
         <div id="contenitore_corpo">
-            <div class="row">
-                <div onclick="mostra('./img/prova.jpeg', 'ciao mondo, sono Homer Simpson')">
-                    <img src="./img/prova.jpeg" alt="">
-                    <p>ciao mondo, sono Homer Simpson</p>
-                </div>
 
-                <div onclick="mostra('./img/prova1.jpeg', 'ciao mondo, sono Homer Simpson')">
-                    <img src="./img/prova1.jpeg" alt="">
-                    <p>ciao mondo, sono Homer Simpson</p>
-                </div>
+            <div>
+                <img onclick="mostra('./img/prova.jpeg', 'ciao mondo, sono Homer Simpson')" src="./img/prova.jpeg" alt="">
+                <p>ciao mondo, sono Homer Simpson</p>
             </div>
 
-            <div class="row">
-                <div onclick="mostra('./img/prova2.png', 'ciao mondo, sono Homer Simpson')">
-                    <img src="./img/prova2.png" alt="">
-                    <p>ciao mondo, sono Homer Simpson</p>
-                </div>
-
-                <div onclick="mostra('./img/prova.jpeg', 'ciao mondo, sono Homer Simpson')">
-                    <img src="./img/prova.jpeg" alt="">
-                    <p>ciao mondo, sono Homer Simpson</p>
-                </div>
+            <div class="piccolo">
+                <img onclick="mostra('./img/prova1.jpeg', 'ciao mondo, sono Homer Simpson')" src="./img/prova1.jpeg" alt="">
+                <p>ciao mondo, sono Homer Simpson</p>
             </div>
+
+
+            <div>
+                <div style="height:30px"></div>
+                <img onclick="mostra('./img/prova2.jpeg', 'ciao mondo, sono Homer Simpson')" src="./img/prova2.png" alt="">
+                <p>ciao mondo, sono Homer Simpson</p>
+            </div>
+
+            <div>
+                <img onclick="mostra('./img/prova.jpeg', 'ciao mondo, sono Homer Simpson')" src="./img/prova.jpeg" alt="">
+                <p>ciao mondo, sono Homer Simpson</p>
+            </div>
+
         </div>
 
     </div>
 
-    <div id="contenitore_menu">
+    <div id="contenitore_menu" onclick="visualizza()">
         <ul id="menu">
             <li id="foto">
-                <a href="make_photo.html">X</a>
-                <!-- <img src="./img/camera.png" alt="camera"> -->
+                <div style="display:none" onclick="make_photo()">
+                    <img src="./img/camera_1.png" alt="camera">
+                </div>
             </li>
             <li id="libro">
-                <a href="libro.html">X</a>
-                <!-- <img src="./img/libro.png" alt="libro"> -->
+                <div style="display:none" onclick="see_books()">
+                    <img src="./img/libro_1.png" alt="libro">
+                </div>
             </li>
         </ul>
     </div>
 
     <div id="mostra_img">
-        
+
         <div onclick="rimuovi()">
             <img id="return" src="./img/freccia.png" alt="">
         </div>
-        
-        
+
+
         <div id="contenitore">
             <img src="" id="img" alt="">
             <p id="text"></p>

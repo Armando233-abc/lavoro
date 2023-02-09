@@ -8,6 +8,7 @@ body {
       display: grid;
       grid-template-columns: 90% 10%;
       height: 100vh;
+      width: 100vw;
 }
 
 #menu {
@@ -32,10 +33,8 @@ body {
       margin-bottom: 10px;
 }
 
-#menu li img{
-      width: 40px;
-      color: darkorchid;
-
+#menu li img {
+      width: 30px;
 }
 
 #contenitore_titolo {
@@ -59,27 +58,34 @@ body {
 }
 
 
-#contenitore_corpo{
+#contenitore_corpo {
       margin-top: 50px;
-      display: grid;
-      grid-template-rows: 1fr 1fr;
-}
-
-#contenitore_corpo .row{
+      margin-left: 10px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      text-align: center;
 }
 
 
-#contenitore_corpo img{
+
+#contenitore_corpo img {
       width: 150px;
       height: 190px;
+      margin: auto;
+      border-radius: 20px;
+}
+#contenitore_corpo p{
+      margin-top: 10px;
+      margin-bottom: 20px;
+}
+
+#contenitore_corpo>.piccolo>img {
+      width: 150px;
+      height: 140px;
       margin: auto;
 }
 
 
-#mostra_img{
+#mostra_img {
       display: none;
       background-color: darkorchid;
       position: fixed;
