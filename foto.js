@@ -1,6 +1,7 @@
 let video = document.querySelector("#video");
 let click_button = document.querySelector("#click-photo");
 let canvas = document.querySelector("#canvas");
+let count = 0
 
 async function mostra_camera() {
       let stream = await navigator.mediaDevices.getUserMedia({
@@ -41,12 +42,17 @@ click_button.addEventListener('click', function () {
 
 
 function salva() {
+      if(localStorage.getItem('count')){
+            count = parseInt(localStorage.getItem('count'));
+            console.log('count: ' + count)
+      }
       const text = document.querySelector("#descrizione")
       if (text.value === '') {
             alert('Inserisci una piccola descrizione');
       } else {
-            localStorage.setItem("img", canvas.toDataURL('image/png'))
-            localStorage.setItem("text", text.value)
+            localStorage.setItem("img" + count, canvas.toDataURL('image/png'))
+            localStorage.setItem("text" + count, text.value)
+            localStorage.setItem("count", count + 1);
             window.location.href = 'index.html';
       }
 

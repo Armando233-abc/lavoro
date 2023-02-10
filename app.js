@@ -1,20 +1,32 @@
-if (localStorage.getItem('img')) {
-      const div = document.createElement('div');
-      const img = document.createElement('img');
-      const p = document.createElement('p');
-      const div_corpo = document.querySelector("#contenitore_corpo")
+if (localStorage.getItem("count")) {
+      const count = parseInt(localStorage.getItem('count'));
 
-      img.src = localStorage.getItem('img')
-      localStorage.removeItem('img')
+      for (let i = 0; i < count; i++) {
+            const div = document.createElement('div');
+            const img = document.createElement('img');
+            const p = document.createElement('p');
+            const div_corpo = document.querySelector("#contenitore_corpo")
 
-      p.innerHTML = localStorage.getItem('text')
+            img.src = localStorage.getItem('img' + i);
 
-      div.setAttribute("onclick", "mostra('" + img.src + "', '" + localStorage.getItem('text') + "')")
+            p.innerHTML = localStorage.getItem('text' + i);
 
-      div.appendChild(img)
-      div.appendChild(p)
-      div_corpo.appendChild(div)
+            div.onclick = "mostra('" + img.src + "', '" + localStorage.getItem('text' + i); + "')";
+
+            if (Math.floor(Math.random() * 2)){
+                  div.setAttribute("class", "piccolo")
+            }
+            div.appendChild(img)
+            div.appendChild(p)
+            div_corpo.appendChild(div)
+      }
 }
+
+// function reset() {
+//       localStorage.clear();
+// }
+
+
 
 function mostra(img, str) {
 
