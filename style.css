@@ -48,7 +48,7 @@ body {
       font-weight: bold;
       font-size: 20pt;
       margin-bottom: 0px;
-      text-align: center;
+      margin-left: 10px;
 }
 
 #figura {
@@ -74,7 +74,7 @@ body {
       border-radius: 20px;
 }
 #contenitore_corpo p{
-      margin-top: 10px;
+      margin-top: 0px;
       margin-bottom: 20px;
 }
 
@@ -96,27 +96,27 @@ body {
 
 
 #return {
-      margin-top: 60px;
+      margin-top: 120px;
       width: 100px;
 }
 
 #contenitore {
       position: absolute;
-      left: 20%;
-      top: 15%;
-      max-width: 240px;
+      left: 13%;
+      top: 25%;
+      max-width: 290px;
 }
 
 #contenitore>img {
-      width: 240px;
-      height: 400px;
+      width: 290px;
+      height: 350px;
       border-radius: 20px;
 }
 
 #contenitore>p {
       margin-top: 30px;
       padding: 10px;
-      background-color: #8A7F8D;
-      height: 70px;
+      background-color: rgba(255, 255, 255, 0.2);
+      height: 55px;
       border-radius: 10px;
 }
