@@ -11,9 +11,9 @@ if (localStorage.getItem("count")) {
 
             p.innerHTML = localStorage.getItem('text' + i);
 
-            div.onclick = "mostra('" + img.src + "', '" + localStorage.getItem('text' + i); + "')";
+            div.setAttribute('onclick', "mostra('" + img.src + "', '" + localStorage.getItem('text' + i) + "')")
 
-            if (Math.floor(Math.random() * 2)){
+            if (Math.floor(Math.random() * 2)) {
                   div.setAttribute("class", "piccolo")
             }
             div.appendChild(img)
