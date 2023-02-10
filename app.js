@@ -8,9 +8,8 @@ if (localStorage.getItem('img')) {
       localStorage.removeItem('img')
 
       p.innerHTML = localStorage.getItem('text')
-      localStorage.removeItem('img')
 
-      div.onclick = "mostra(" + img.src + ", ciao sono homer simp)";
+      div.setAttribute("onclick", "mostra('" + img.src + "', '" + localStorage.getItem('text') + "')")
 
       div.appendChild(img)
       div.appendChild(p)
@@ -35,21 +34,21 @@ function rimuovi() {
 }
 
 
-function visualizza(){
+function visualizza() {
       const li = document.querySelectorAll("#contenitore_menu li")
       const contenitore_body = document.querySelector("#contenitore_body");
       const divs = document.querySelectorAll("#contenitore_menu div");
 
       contenitore_body.style.opacity = "0.5";
-      divs.forEach((div) =>{
+      divs.forEach((div) => {
             div.style.display = "block"
       })
-      li.forEach((l)=>{
+      li.forEach((l) => {
             l.style.backgroundColor = "chartreuse"
       })
 }
 
-function togli(){
+function togli() {
       const contenitore_body = document.querySelector("#contenitore_body");
       contenitore_body.style.opacity = "1";
 
@@ -64,7 +63,7 @@ function togli(){
       })
 }
 
-function make_photo(){
+function make_photo() {
       window.location.href = "make_photo.html";
 }
 
@@ -72,7 +71,7 @@ function make_photo() {
       window.location.href = "make_photo.html";
 }
 
-function see_books(){
+function see_books() {
       window.location.href = "libro.html";
 }
 
