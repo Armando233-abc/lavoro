@@ -17,3 +17,7 @@ function rimuovi() {
       const menu = document.querySelector("#menu")
       menu.style.display = "block"
 }
+
+function ritorna(){
+      window.location.href = "index.html";
+}
