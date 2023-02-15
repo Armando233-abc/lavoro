@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style_libro.css">
+    <script src="./libro.js" defer></script>
 </head>
 
 <body>
@@ -29,11 +30,11 @@
 
             <div id="contenitore_immagini">
                 <div id="bho">
-                    <img class="p" src="./img/A.jpg" alt="">
-                    <img class="p" src="./img/B.jpg" style="margin-top: 10px;" alt="">
+                    <img class="p" onclick="mostra('./img/A.jpg')" src="./img/A.jpg" alt="">
+                    <img class="p" onclick="mostra('./img/B.jpg')" src="./img/B.jpg" style="margin-top: 10px;" alt="">
                 </div>
                 <div>
-                    <img class="g" src="./img/C.jpg" alt="">
+                    <img class="g" onclick="mostra('./img/C.jpg')" src="./img/C.jpg" alt="">
                 </div>
             </div>
 
@@ -56,6 +57,18 @@
                 esperienze
                 passate
             </p>
+        </div>
+    </div>
+
+    <div id="mostra_img">
+
+        <div onclick="rimuovi()">
+            <img id="return" src="./img/back_2.png" alt="">
+        </div>
+
+
+        <div id="contenitore">
+            <img src="" id="img" alt="">
         </div>
     </div>
 
