@@ -13,9 +13,12 @@ if (localStorage.getItem("count")) {
 
             div.setAttribute('onclick', "mostra('" + img.src + "', '" + localStorage.getItem('text' + i) + "')")
 
-            if (Math.floor(Math.random() * 2)) {
-                  div.setAttribute("class", "piccolo")
+            let randomInt;
+            for (let i = 0; i < 10; i++) {
+                  randomInt = Math.floor(Math.random() * (max - min) + min);
             }
+            div_corpo.style.marginTop = randomInt + 'px'
+
             div.appendChild(img)
             div.appendChild(p)
             div_corpo.appendChild(div)
@@ -29,7 +32,22 @@ function reset() {
 
 reset()
 */
-
+function sflasato() {
+      let divs = document.querySelectorAll('#contenitore_corpo > div')
+      let max = 50, min = 10;
+      let j = 0
+      divs.forEach(function (div) {
+            if (j < 2) {
+                  j++;
+            } else {
+                  let randomInt;
+                  for (let i = 0; i < 10; i++) {
+                        randomInt = Math.floor(Math.random() * (max - min) + min);
+                  }
+                  div.style.marginTop = randomInt + 'px'
+            }
+      })
+}
 
 function mostra(img, str) {
 
@@ -90,68 +108,3 @@ function see_books() {
       window.location.href = "libro.html";
 }
 
-
-///-------------------------------------/
-// let video = document.querySelector("#video");
-// let click_button = document.querySelector("#click-photo");
-// let canvas = document.querySelector("#canvas");
-
-// async function mostra_camera() {
-//       let stream = await navigator.mediaDevices.getUserMedia({
-//             video: {
-//                   width: {
-//                         min: 1280,
-//                         ideal: 1920,
-//                         max: 2560,
-//                   },
-//                   height: {
-//                         min: 720,
-//                         ideal: 1080,
-//                         max: 1440
-//                   },
-//                   facingMode: "environment"
-//             }, audio: false
-//       });
-//       video.srcObject = stream;
-// }
-// mostra_camera()
-
-// click_button.addEventListener('click', function () {
-//       canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-
-//       video.style.display = 'none';
-//       click_button.dyspplay = 'none';
-
-//       const contenitore = document.querySelector('#contenitore');
-//       contenitore.style.display = 'none';
-
-//       const contenitore_img = document.querySelector('#contenitore_img');
-//       contenitore_img.style.display = 'block';
-
-
-//       const selezione = document.querySelector('#selezione');
-//       selezione.style.display = 'grid';
-// });
-
-
-// function salva() {
-//       const testo = document.querySelector('#descrizione')
-//       const div = document.createElement('div');
-//       const img = document.createElement('img');
-//       const p = document.createElement('p');
-
-//       img.src = canvas.toDataURL('image/png')
-//       p.innerHTML = testo.value
-//       div.onclick = "mostra(" + img.src + "," + testo.value + ")";
-
-//       div.appendChild(img)
-//       div.appendChild(p)
-
-// }
-
-/**
- * <div onclick="mostra('./img/prova2.png', 'ciao mondo, sono Homer Simpson')">
-                    <img src="./img/prova2.png" alt="">
-                    <p>ciao mondo, sono Homer Simpson</p>
-                </div>
- */
