@@ -22,12 +22,13 @@ if (localStorage.getItem("count")) {
       }
 }
 
+/*
 function reset() {
       localStorage.clear();
 }
 
 reset()
-
+*/
 
 
 function mostra(img, str) {

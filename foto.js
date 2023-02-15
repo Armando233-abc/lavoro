@@ -8,15 +8,15 @@ async function mostra_camera() {
             video: {
                   width: {
                         min: 1280,
-                        ideal: 1920,
+                        ideal: 1080,
                         max: 2560,
                   },
                   height: {
                         min: 720,
-                        ideal: 1080,
+                        ideal: 1920,
                         max: 1440
                   },
-                  facingMode: "environment"
+                  facingMode: "user"
             }, audio: false
       });
       video.srcObject = stream;

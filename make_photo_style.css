@@ -12,7 +12,8 @@ body {
 
 #return {
       margin-top: 80px;
-      width: 100px;
+      width: 45px;
+      margin-left: 5px;
 }
 
 #selezione>#destra {
@@ -21,8 +22,9 @@ body {
 }
 
 #v {
-      margin-top: 50px;
-      width: 100px;
+      margin-top: 80px;
+      width: 45px;
+      margin-right: 5px;
 }
 
 #contenitore {
