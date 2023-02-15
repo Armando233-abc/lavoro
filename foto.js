@@ -16,7 +16,7 @@ async function mostra_camera() {
                         ideal: 1920,
                         max: 1440
                   },
-                  facingMode: "user"
+                  facingMode: { exact: "environment" }
             }, audio: false
       });
       video.srcObject = stream;
