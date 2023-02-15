@@ -22,9 +22,11 @@ if (localStorage.getItem("count")) {
       }
 }
 
-// function reset() {
-//       localStorage.clear();
-// }
+function reset() {
+      localStorage.clear();
+}
+
+reset()
 
 
 
@@ -88,7 +90,7 @@ function see_books() {
 }
 
 
-// /-------------------------------------/
+///-------------------------------------/
 // let video = document.querySelector("#video");
 // let click_button = document.querySelector("#click-photo");
 // let canvas = document.querySelector("#canvas");
