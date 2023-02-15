@@ -24,7 +24,9 @@ async function mostra_camera() {
 mostra_camera()
 
 click_button.addEventListener('click', function () {
-      canvas.getContext('2d').drawImage(video, 0, 0, '240px', '400px');
+      canvas.width = '240px'
+      canvas.height = '400px'
+      canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
 
       video.style.display = 'none';
       click_button.dyspplay = 'none';
