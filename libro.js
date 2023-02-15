@@ -7,7 +7,7 @@ function mostra(img) {
       contenitore.style.display = "block"
       image.src = img
       menu.style.display = 'none'
-      
+
 }
 
 function rimuovi() {
@@ -18,6 +18,3 @@ function rimuovi() {
       menu.style.display = "block"
 }
 
-function ritorna(){
-      window.location.href = "index.html";
-}
