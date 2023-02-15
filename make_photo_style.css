@@ -45,7 +45,8 @@ body {
       border-radius: 500px;
       background-color: chartreuse;
       border: none;
-      margin-left: 30%;
+      margin-top: 20px;
+      margin-left: 35%;
 }
 
 #click-photo > img{
