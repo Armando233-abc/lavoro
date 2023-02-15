@@ -29,7 +29,7 @@ click_button.addEventListener('click', function () {
 
       video.style.display = 'none';
       click_button.dysplay = 'none';
-      a.display = 'none'
+      a.style.display = 'none'
 
       const contenitore = document.querySelector('#contenitore');
       contenitore.style.display = 'none';
