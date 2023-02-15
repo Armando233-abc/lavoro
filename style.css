@@ -34,7 +34,8 @@ body {
 }
 
 #menu li img {
-      width: 50px;
+      margin: 20% 0% 10% 40%;
+      width: 30px;
 }
 
 #contenitore_titolo {

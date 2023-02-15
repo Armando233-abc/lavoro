@@ -5,6 +5,12 @@ body {
       overflow-x: hidden;
 }
 
+#return_1 {
+      margin-top: 100px;
+      width: 45px;
+      margin-left: 5px;
+}
+
 #selezione {
       display: none;
       grid-template-columns: 1fr 1fr;
@@ -30,7 +36,19 @@ body {
 #contenitore {
       position: absolute;
       left: 10%;
-      top: 5%;
+      top: 20%;
+}
+
+#click-photo{
+      width: 100px;
+      height: 100px;
+      border-radius: 500px;
+      background-color: chartreuse;
+      margin-left: 30%;
+}
+
+#click-photo > img{
+      width: 65px;
 }
 
 #contenitore_img {
