@@ -1,5 +1,6 @@
 let video = document.querySelector("#video");
 let click_button = document.querySelector("#click-photo");
+let a = document.querySelector("#a");
 let canvas = document.querySelector("#canvas");
 let count = 0
 
@@ -27,7 +28,8 @@ click_button.addEventListener('click', function () {
       canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
 
       video.style.display = 'none';
-      click_button.dyspplay = 'none';
+      click_button.dysplay = 'none';
+      a.display = 'none'
 
       const contenitore = document.querySelector('#contenitore');
       contenitore.style.display = 'none';
