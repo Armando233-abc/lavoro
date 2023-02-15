@@ -7,16 +7,16 @@ async function mostra_camera() {
       let stream = await navigator.mediaDevices.getUserMedia({
             video: {
                   width: {
-                        min: 720,
-                        ideal: 1080,
-                        max: 1440,
-                  },
-                  height: {
                         min: 1280,
                         ideal: 1920,
-                        max: 2560
+                        max: 2560,
                   },
-                  facingMode: { exact: "environment" }
+                  height: {
+                        min: 720,
+                        ideal: 1080,
+                        max: 1440
+                  },
+                  facingMode:  { exact: "environment" }
             }, audio: false
       });
       video.srcObject = stream;
@@ -42,7 +42,7 @@ click_button.addEventListener('click', function () {
 
 
 function salva() {
-      if (localStorage.getItem('count')) {
+      if(localStorage.getItem('count')){
             count = parseInt(localStorage.getItem('count'));
             console.log('count: ' + count)
       }
