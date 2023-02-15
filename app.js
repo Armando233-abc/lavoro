@@ -13,15 +13,15 @@ if (localStorage.getItem("count")) {
 
             div.setAttribute('onclick', "mostra('" + img.src + "', '" + localStorage.getItem('text' + i) + "')")
 
+            div.appendChild(img)
+            div.appendChild(p)
+            div_corpo.appendChild(div)
+
             let randomInt;
             for (let i = 0; i < 10; i++) {
                   randomInt = Math.floor(Math.random() * (max - min) + min);
             }
-            div_corpo.style.marginTop = randomInt + 'px'
-
-            div.appendChild(img)
-            div.appendChild(p)
-            div_corpo.appendChild(div)
+            div.style.marginTop = randomInt + 'px'
       }
 }
 
@@ -37,15 +37,9 @@ function sflasato() {
       let max = 50, min = 10;
       let j = 0
       divs.forEach(function (div) {
-            if (j < 2) {
-                  j++;
-            } else {
-                  let randomInt;
-                  for (let i = 0; i < 10; i++) {
-                        randomInt = Math.floor(Math.random() * (max - min) + min);
-                  }
-                  div.style.marginTop = randomInt + 'px'
-            }
+            let randomInt = Math.floor(Math.random() * (max - min) + min);
+            div.style.marginTop = randomInt + 'px'
+
       })
 }
 
