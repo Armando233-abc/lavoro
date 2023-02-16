@@ -1,11 +1,17 @@
 if (localStorage.getItem("count")) {
       const count = parseInt(localStorage.getItem('count'));
+      
+      const sinistra = document.querySelectorAll("#sinistra > div");
+      const destra = document.querySelectorAll("#destra > div");
+
+      let id = sinistra.length <= destra.length ? "#sinistra" : "#destra";
 
       for (let i = 0; i < count; i++) {
             const div = document.createElement('div');
             const img = document.createElement('img');
             const p = document.createElement('p');
-            const div_corpo = document.querySelector("#contenitore_corpo")
+            const div_corpo = document.querySelector(id)
+            
 
             img.src = localStorage.getItem('img' + i);
 
@@ -17,11 +23,6 @@ if (localStorage.getItem("count")) {
             div.appendChild(p)
             div_corpo.appendChild(div)
 
-            let randomInt;
-            for (let i = 0; i < 10; i++) {
-                  randomInt = Math.floor(Math.random() * (max - min) + min);
-            }
-            div.style.marginTop = randomInt + 'px'
       }
 }
 
@@ -32,16 +33,16 @@ function reset() {
 
 reset()
 */
-function sflasato() {
-      let divs = document.querySelectorAll('#contenitore_corpo > div')
-      let max = 50, min = 10;
-      let j = 0
-      divs.forEach(function (div) {
-            let randomInt = Math.floor(Math.random() * (max - min) + min);
-            div.style.marginTop = randomInt + 'px'
+// function sflasato() {
+//       let divs = document.querySelectorAll('#contenitore_corpo > div')
+//       let max = 50, min = 10;
+//       let j = 0
+//       divs.forEach(function (div) {
+//             let randomInt = Math.floor(Math.random() * (max - min) + min);
+//             div.style.marginTop = randomInt + 'px'
 
-      })
-}
+//       })
+// }
 
 function mostra(img, str) {
 
