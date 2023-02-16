@@ -2,15 +2,15 @@ if (localStorage.getItem("count")) {
       const count = parseInt(localStorage.getItem('count'));
 
       for (let i = 0; i < count; i++) {
-            const div = document.createElement('div');
-            const img = document.createElement('img');
-            const p = document.createElement('p');
-            const div_corpo = document.querySelector(id)
-
             const sinistra = document.querySelectorAll("#sinistra > div");
             const destra = document.querySelectorAll("#destra > div");
 
             let id = sinistra.length <= destra.length ? "#sinistra" : "#destra";
+
+            const div = document.createElement('div');
+            const img = document.createElement('img');
+            const p = document.createElement('p');
+            const div_corpo = document.querySelector(id)
 
 
             img.src = localStorage.getItem('img' + i);
