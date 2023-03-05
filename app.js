@@ -26,23 +26,6 @@ if (localStorage.getItem("count")) {
       }
 }
 
-/*
-function reset() {
-      localStorage.clear();
-}
-
-reset()
-*/
-// function sflasato() {
-//       let divs = document.querySelectorAll('#contenitore_corpo > div')
-//       let max = 50, min = 10;
-//       let j = 0
-//       divs.forEach(function (div) {
-//             let randomInt = Math.floor(Math.random() * (max - min) + min);
-//             div.style.marginTop = randomInt + 'px'
-
-//       })
-// }
 
 function mostra(img, str) {
 
@@ -59,36 +42,6 @@ function mostra(img, str) {
 function rimuovi() {
       const contenitore = document.querySelector("#mostra_img")
       contenitore.style.display = "none"
-}
-
-
-function visualizza() {
-      const li = document.querySelectorAll("#contenitore_menu li")
-      const contenitore_body = document.querySelector("#contenitore_body");
-      const divs = document.querySelectorAll("#contenitore_menu div");
-
-      contenitore_body.style.opacity = "0.5";
-      divs.forEach((div) => {
-            div.style.display = "block"
-      })
-      li.forEach((l) => {
-            l.style.backgroundColor = "chartreuse"
-      })
-}
-
-function togli() {
-      const contenitore_body = document.querySelector("#contenitore_body");
-      contenitore_body.style.opacity = "1";
-
-      const li = document.querySelectorAll("#contenitore_menu li")
-      li.forEach((l) => {
-            l.style.backgroundColor = "DarkOrchid"
-      })
-
-      const divs = document.querySelectorAll("#contenitore_menu div");
-      divs.forEach((div) => {
-            div.style.display = "none"
-      })
 }
 
 function make_photo() {
