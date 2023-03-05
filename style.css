@@ -10,6 +10,9 @@ body {
 }
 
 #menu {
+      position: fixed;
+      width: 100%;
+      top: 0;
       margin: 0;
       padding: 0;
       background-color: chartreuse;
@@ -39,7 +42,7 @@ body {
 
 #contenitore_titolo {
       max-width: 48%;
-      margin-top: 50px;
+      margin-top: 70px;
 }
 
 #titolo {
