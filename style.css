@@ -8,6 +8,7 @@ body {
       height: 100vh;
       width: 100vw;
 }
+
 /*da qui*/
 #menu {
       position: fixed;
@@ -91,6 +92,7 @@ body {
       display: none;
       background-color: darkorchid;
       position: fixed;
+      top: 0;
       height: 100vh;
       width: 100vw;
       overflow: hidden;
