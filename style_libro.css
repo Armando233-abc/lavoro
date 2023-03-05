@@ -4,37 +4,21 @@ body {
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
-
-    display: grid;
-    grid-template-columns: 90% 10%;
 }
 
-#menu {
-    margin: 0;
-    padding: 0;
-    background-color: chartreuse;
-    width: 35px;
-    height: 100%;
-    margin-left: auto;
-    list-style-type: none;
+#return {
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-#contenitore_menu li {
-    height: 40px;
-    width: 40px;
-    border-radius: 500px;
-    background-color: chartreuse;
-
-    position: relative;
-    left: -20px;
-    top: 145px;
-    margin-bottom: 10px;
+#return img {
+    width: 100px;
 }
-
 
 #contenitore_titolo {
     max-width: 48%;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 #titolo {
@@ -89,13 +73,6 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-}
-
-
-#return {
-    margin-top: 80px;
-    width: 45px;
-    margin-left: 5px;
 }
 
 #contenitore {

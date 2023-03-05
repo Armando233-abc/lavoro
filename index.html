@@ -10,8 +10,21 @@
     <title>Document</title>
 </head>
 
-<body> <!-- onload="reset()" -->
-
+<body>
+    <div id="contenitore_menu">
+        <ul id="menu">
+            <li id="libro">
+                <div onclick="see_books()">
+                    <img src="./img/libro.png" alt="libro">
+                </div>
+            </li>
+            <li id="foto">
+                <div onclick="make_photo()" class="destra">
+                    <img src="./img/camera.png" alt="camera">
+                </div>
+            </li>
+        </ul>
+    </div>
 
     <div id="contenitore_body" onclick="togli()">
         <div id="contenitore_titolo">
@@ -95,21 +108,6 @@
             </div>
         </div>
 
-    </div>
-
-    <div id="contenitore_menu" onclick="visualizza()">
-        <ul id="menu">
-            <li id="foto">
-                <div style="display:none" onclick="make_photo()">
-                    <img src="./img/camera.png" alt="camera">
-                </div>
-            </li>
-            <li id="libro">
-                <div style="display:none" onclick="see_books()">
-                    <img src="./img/libro.png" alt="libro">
-                </div>
-            </li>
-        </ul>
     </div>
 
     <div id="mostra_img">
